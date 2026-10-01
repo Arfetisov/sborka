@@ -663,4 +663,144 @@
         </div>
       </div>
       <div class="venue-map reveal">
-        <iframe src="https://yandex.ru/map-widget/v1/?text=Санкт-Петербург%2C%20Наличная%204
+        <iframe src="https://yandex.ru/map-widget/v1/?text=Санкт-Петербург%2C%20Наличная%2044%20корп%201&z=16" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="register">
+  <div class="container">
+    <div class="form-wrapper reveal">
+      <h2>СБОРКА — 4 часа, после которых есть что делать.</h2>
+      <p class="form-sub">Участие бесплатное. Количество мест ограничено.</p>
+      <form id="regForm" onsubmit="return handleSubmit(event)">
+        <input type="text" name="name" placeholder="Имя" required>
+        <input type="text" name="company" placeholder="Компания" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit" class="form-btn">Забрать место</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <h3>Спасибо!</h3>
+        <p>Мы свяжемся с вами и подтвердим участие.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <h2 class="reveal" style="text-align: center;">Частые вопросы</h2>
+    <ul class="faq-list">
+      <li class="faq-item reveal" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Для кого эта конференция?</div>
+        <div class="faq-a">Для владельцев и руководителей мебельных производств.</div>
+      </li>
+      <li class="faq-item reveal" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Нужно ли платить?</div>
+        <div class="faq-a">Нет, участие бесплатное.</div>
+      </li>
+      <li class="faq-item reveal" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Будет ли запись?</div>
+        <div class="faq-a">Нет. Это живое мероприятие.</div>
+      </li>
+      <li class="faq-item reveal" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Можно ли прийти командой?</div>
+        <div class="faq-a">Да, до 2 человек от компании.</div>
+      </li>
+      <li class="faq-item reveal" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Будут ли образцы продукции?</div>
+        <div class="faq-a">Нет, это конференция, а не выставка.</div>
+      </li>
+      <li class="faq-item reveal" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Что значит «простое действие от каждого спикера»?</div>
+        <div class="faq-a">Каждый выступающий в конце даёт одно конкретное действие, которое можно применить сразу. Это может быть звонок, одна строка в договоре, один вопрос или одна цифра для расчёта.</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners">
+  <div class="container">
+    <h3>Партнёры</h3>
+    <div class="partners-grid">
+      <div class="partner-item reveal">
+        <div class="partner-name">ЦРПП</div>
+        <div class="partner-desc">Центр развития и поддержки предпринимательства СПб</div>
+      </div>
+      <div class="partner-item reveal">
+        <div class="partner-name">Мой бизнес</div>
+        <div class="partner-desc">Центр оказания услуг для предпринимателей</div>
+      </div>
+      <div class="partner-item reveal">
+        <div class="partner-name">Цифровые решения</div>
+        <div class="partner-desc">Автоматизация продаж и производства</div>
+      </div>
+      <div class="partner-item reveal">
+        <div class="partner-name">Омега Дизайн</div>
+        <div class="partner-desc">Алюминиевые интерьерные системы</div>
+      </div>
+      <div class="partner-item reveal">
+        <div class="partner-name">UIS</div>
+        <div class="partner-desc">IP-телефония и аналитика</div>
+      </div>
+      <div class="partner-item reveal">
+        <div class="partner-name">Amix</div>
+        <div class="partner-desc">Мебельная фурнитура и комплектующие</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">СБОРКА <span>·</span> ВСЕ | МЕБЕЛЬ</div>
+        <p>Конференция для мебельных производителей. 29 октября 2026 · Санкт-Петербург.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <a href="mailto:ar.fetisov@gmail.com">ar.fetisov@gmail.com</a>
+        <a href="tel:+79650348852">+7 (965) 034-88-52</a>
+      </div>
+      <div class="footer-col">
+        <h4>Соцсети</h4>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 СБОРКА. Все права защищены.</div>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('regForm');
+    const success = document.getElementById('formSuccess');
+    const data = new FormData(form);
+    console.log('Заявка:', Object.fromEntries(data));
+    form.style.display = 'none';
+    success.style.display = 'block';
+    return false;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

@@ -17,15 +17,12 @@
   }
   .container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
 
-  /* ===== TYPOGRAPHY ===== */
   h1, h2, h3 { font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; }
   h1 { font-size: clamp(48px, 9vw, 120px); }
   h2 { font-size: clamp(32px, 5vw, 64px); margin-bottom: 48px; letter-spacing: -0.04em; }
   h3 { font-size: 20px; margin-bottom: 12px; letter-spacing: -0.01em; }
   p { font-size: 17px; color: #9A9A9A; line-height: 1.7; }
-  .accent { color: #FF6B35; }
 
-  /* ===== ANIMATED GRADIENT TEXT ===== */
   .gradient-text {
     background: linear-gradient(90deg, #FF6B35, #FF9F1C, #FF6B35, #FF3D00);
     background-size: 300% 100%;
@@ -39,7 +36,6 @@
     50% { background-position: 100% 50%; }
   }
 
-  /* ===== FADE-IN ON SCROLL ===== */
   .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -47,7 +43,6 @@
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ===== HERO ===== */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -93,7 +88,6 @@
     text-transform: uppercase;
   }
   .hero h1 { margin-bottom: 32px; }
-  .hero h1 span { display: block; }
   .hero-sub {
     font-size: clamp(18px, 2.2vw, 24px);
     color: #9A9A9A;
@@ -119,7 +113,6 @@
   .btn-primary {
     background: #FF6B35;
     color: #FFF;
-    box-shadow: 0 0 0 0 rgba(255,107,53,0.6);
   }
   .btn-primary:hover {
     background: #FF5520;
@@ -137,7 +130,6 @@
   }
   .hero-tagline strong { color: #FF6B35; }
 
-  /* ===== STATS ===== */
   .stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -161,11 +153,9 @@
   .stat-num span { color: #FF6B35; }
   .stat-label { font-size: 14px; color: #666; margin-top: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
 
-  /* ===== SECTIONS ===== */
   section { padding: 120px 0; position: relative; }
   section + section { border-top: 1px solid #1A1A1A; }
 
-  /* ===== STORY ===== */
   .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
   .story-quotes { list-style: none; margin-top: 40px; }
   .story-quotes li {
@@ -178,7 +168,6 @@
   .story-quotes li:last-child { border-bottom: none; }
   .story-quotes strong { color: #EDEDED; font-weight: 700; display: block; margin-bottom: 4px; }
 
-  /* ===== ADVANTAGES ===== */
   .adv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .adv-card {
     background: #111;
@@ -211,7 +200,6 @@
   }
   .adv-card:hover .adv-num { color: #FF6B35; }
 
-  /* ===== PROGRAM ===== */
   .program-intro {
     background: #111;
     border-left: 3px solid #FF6B35;
@@ -244,7 +232,6 @@
   .program-take { font-size: 15px; color: #9A9A9A; }
   .program-take strong { color: #FF6B35; font-weight: 600; }
 
-  /* ===== SPEAKERS ===== */
   .speakers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .speaker-card {
     background: #111;
@@ -271,7 +258,6 @@
   .speaker-company { font-size: 14px; color: #FF6B35; margin-bottom: 16px; font-weight: 600; }
   .speaker-desc { font-size: 15px; color: #9A9A9A; line-height: 1.6; }
 
-  /* ===== VENUE ===== */
   .venue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
   .venue-address {
     background: #111;
@@ -291,7 +277,6 @@
   }
   .venue-map iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.3) brightness(0.8); }
 
-  /* ===== FORM ===== */
   .form-section { background: #0D0D0D; border-top: 1px solid #1A1A1A; }
   .form-wrapper { max-width: 560px; margin: 0 auto; }
   .form-wrapper h2 { text-align: center; margin-bottom: 16px; }
@@ -334,7 +319,6 @@
   }
   .form-success h3 { color: #FF6B35; margin-bottom: 8px; }
 
-  /* ===== FAQ ===== */
   .faq-list { list-style: none; max-width: 800px; margin: 0 auto; }
   .faq-item { border-bottom: 1px solid #1A1A1A; padding: 28px 0; cursor: pointer; }
   .faq-q {
@@ -352,24 +336,331 @@
   .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s; color: #9A9A9A; font-size: 16px; line-height: 1.7; }
   .faq-item.open .faq-a { max-height: 400px; padding-top: 20px; }
 
-  /* ===== PARTNERS ===== */
-  .partners-section { padding: 96px 0; border-top: 1px solid #1A1A1A; }
-  .partners-grid { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: center; margin-top: 48px; }
+  .partners { text-align: center; padding: 96px 0; border-top: 1px solid #1A1A1A; }
+  .partners h3 { color: #666; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 48px; font-weight: 600; }
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
   .partner-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px 32px;
     background: #111;
     border: 1px solid #1E1E1E;
-    border-radius: 10px;
-    min-width: 180px;
-    min-height: 80px;
-    transition: all 0.3s;
-    color: #EDEDED;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: -0.01em;
-    text-align: center;
+    border-radius: 12px;
+    padding: 32px 24px;
+    transition: border-color 0.2s, transform 0.2s;
   }
-  .partner-item:hover { border-color: #2
+  .partner-item:hover { border-color: #FF6B35; transform: translateY(-2px); }
+  .partner-name {
+    font-size: 20px;
+    font-weight: 800;
+    color: #EDEDED;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .partner-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  footer {
+    background: #050505;
+    padding: 64px 0 48px;
+    border-top: 1px solid #1A1A1A;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+  .footer-brand { font-size: 24px; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.02em; }
+  .footer-brand span { color: #FF6B35; }
+  .footer-col h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: #666; margin-bottom: 20px; font-weight: 600; }
+  .footer-col a { display: block; color: #9A9A9A; text-decoration: none; font-size: 15px; padding: 8px 0; transition: color 0.15s; }
+  .footer-col a:hover { color: #FF6B35; }
+  .footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid #1A1A1A;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+  }
+
+  @media (max-width: 900px) {
+    section { padding: 80px 0; }
+    .story-grid, .venue-grid { grid-template-columns: 1fr; gap: 40px; }
+    .adv-grid { grid-template-columns: 1fr; }
+    .speakers-grid { grid-template-columns: 1fr; }
+    .partners-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .program-item { grid-template-columns: 1fr; gap: 8px; }
+    .program-time { font-size: 16px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 500px) {
+    .partners-grid { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; }
+    .btn { width: 100%; text-align: center; }
+    .container { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">Конференция · 29 октября 2026 · Санкт-Петербург</div>
+      <h1><span>СБОРКА</span></h1>
+      <p class="hero-sub">
+        Конференция, которую собрали вы. <strong>10 спикеров. 4 часа практики.</strong>
+        Программа составлена из вопросов участников сообщества «ВСЕ | МЕБЕЛЬ».
+      </p>
+      <div class="hero-actions">
+        <a href="#register" class="btn btn-primary">Зарегистрироваться</a>
+      </div>
+      <p class="hero-note">Участие бесплатное. Количество мест ограничено.</p>
+      <p class="hero-tagline">
+        <strong>Каждый спикер даст одно простое действие</strong>, которое можно внедрить сразу.
+      </p>
+    </div>
+    <div class="stats reveal">
+      <div class="stat">
+        <div class="stat-num">10</div>
+        <div class="stat-label">Спикеров</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4<span>ч</span></div>
+        <div class="stat-label">Практики</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Тем</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">День</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section>
+  <div class="container">
+    <div class="story-grid">
+      <div class="reveal">
+        <h2>Мы не придумывали темы. <span class="gradient-text">Мы их собрали.</span></h2>
+        <p>За последний год мы получили сотни вопросов от мебельных производителей. Провели десятки личных встреч. Прочитали каждое сообщение в сообществе «ВСЕ | МЕБЕЛЬ».</p>
+      </div>
+      <div class="reveal">
+        <ul class="story-quotes">
+          <li><strong>Привлечение клиентов</strong> «реклама дорожает, а лидов всё меньше».</li>
+          <li><strong>Телефония и аналитика</strong> «звонки теряются, а мы не видим где».</li>
+          <li><strong>Автоматизация и ИИ</strong> «слышали про CRM, но не знаем с чего начать».</li>
+          <li><strong>Кадры в цех</strong> «некого брать, а те, кто есть — уходят».</li>
+          <li><strong>Алюминиевые фасады</strong> «хотим выйти в премиум, но не знаем как».</li>
+          <li><strong>Юридическая защита</strong> «клиент пришёл с претензией, а мы не готовы».</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section>
+  <div class="container">
+    <h2 class="reveal">Не формат, <span class="gradient-text">а результат</span></h2>
+    <div class="adv-grid">
+      <div class="adv-card reveal">
+        <div class="adv-num">01</div>
+        <h3>Живой опыт, не слайды</h3>
+        <p>Спикеры говорят не по сценарию, а отвечают на вопросы зала.</p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-num">02</div>
+        <h3>4 часа — вся цепочка</h3>
+        <p>От первого звонка клиента до отгрузки заказа. Без растягивания.</p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-num">03</div>
+        <h3>Простое действие от каждого</h3>
+        <p>Каждый спикер заканчивает выступление одним действием, которое можно внедрить сразу.</p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-num">04</div>
+        <h3>Люди, которые в теме</h3>
+        <p>Не «обмен визитками», а разговор с теми, у кого те же боли.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section>
+  <div class="container">
+    <h2 class="reveal">Программа</h2>
+    <div class="program-intro reveal">
+      <h3>Как устроена программа</h3>
+      <p>Каждое выступление заканчивается одним простым действием. Не «стратегией на год», а шагом, который можно внедрить сразу или в первый рабочий день после конференции.</p>
+    </div>
+    <ul class="program-list">
+      <li class="program-item reveal">
+        <div class="program-time">11:00</div>
+        <div>
+          <div class="program-topic">Открытие. Экосистема «ВСЕ | МЕБЕЛЬ»</div>
+          <div class="program-speaker">Артём Фетисов · «ВСЕ | МЕБЕЛЬ»</div>
+          <div class="program-take"><strong>Что заберёте:</strong> понимание, как сообщество закрывает задачи производителя</div>
+        </div>
+      </li>
+      <li class="program-item reveal">
+        <div class="program-time">11:15</div>
+        <div>
+          <div class="program-topic">Господдержка + биржа заказов для участников сообщества</div>
+          <div class="program-speaker">Игорь Федосов · ЦРПП</div>
+          <div class="program-take"><strong>Что заберёте:</strong> список субсидий и доступ к бирже заказов</div>
+        </div>
+      </li>
+      <li class="program-item reveal">
+        <div class="program-time">11:30</div>
+        <div>
+          <div class="program-topic">Рабочие каналы привлечения клиентов. Где клиенты в 2027?</div>
+          <div class="program-speaker">Иван Фролов · BlastBit</div>
+          <div class="program-take"><strong>Что заберёте:</strong> карту каналов с прогнозом на 2 года</div>
+        </div>
+      </li>
+      <li class="program-item reveal">
+        <div class="program-time">12:00</div>
+        <div>
+          <div class="program-topic">Телефония для захвата</div>
+          <div class="program-speaker">Дмитрий Мухин · UIS</div>
+          <div class="program-take"><strong>Что заберёте:</strong> схему аналитики звонков и точки потери лидов</div>
+        </div>
+      </li>
+      <li class="program-item reveal">
+        <div class="program-time">12:30</div>
+        <div>
+          <div class="program-topic">Сервисы автоматизации продаж и производства</div>
+          <div class="program-speaker">Артём Фетисов · «Цифровые решения»</div>
+          <div class="program-take"><strong>Что заберёте:</strong> чек-лист внедрения CRM, ИИ-ботов и дашбордов</div>
+        </div>
+      </li>
+      <li class="program-item reveal">
+        <div class="program-time">13:00</div>
+        <div>
+          <div class="program-topic">Кофе-брейк</div>
+        </div>
+      </li>
+      <li class="program-item reveal">
+        <div class="program-time">13:30</div>
+        <div>
+          <div class="program-topic">Поток сотрудников в цех</div>
+          <div class="program-speaker">Валерия Блау · «БлауПроф»</div>
+          <div class="program-take"><strong>Что заберёте:</strong> методику подбора и адаптации цеховых кадров</div>
+        </div>
+      </li>
+      <li class="program-item reveal">
+        <div class="program-time">14:00</div>
+        <div>
+          <div class="program-topic">Как через алюминиевые фасады выйти в премиум-сегмент</div>
+          <div class="program-speaker">Александр Бартев · «Омега Дизайн»</div>
+          <div class="program-take"><strong>Что заберёте:</strong> понимание ниши, её экономики и точки входа</div>
+        </div>
+      </li>
+      <li class="program-item reveal">
+        <div class="program-time">14:30</div>
+        <div>
+          <div class="program-topic">Час суда. Потребительский экстремизм</div>
+          <div class="program-speaker">Валерия Леви · «ЛЕВИ | БЮРО»</div>
+          <div class="program-take"><strong>Что заберёте:</strong> защиту в договоре и на приёмке</div>
+        </div>
+      </li>
+      <li class="program-item reveal">
+        <div class="program-time">15:00</div>
+        <div>
+          <div class="program-topic">Партнёрское выступление</div>
+          <div class="program-speaker">Дизайн / материалы</div>
+        </div>
+      </li>
+      <li class="program-item reveal">
+        <div class="program-time">15:30</div>
+        <div>
+          <div class="program-topic">Нетворкинг + круглые столы</div>
+          <div class="program-take">Знакомства, обмен опытом, разбор кейсов по запросу</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section>
+  <div class="container">
+    <h2 class="reveal">Спикеры</h2>
+    <div class="speakers-grid">
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar">АФ</div>
+        <div class="speaker-name">Артём Фетисов</div>
+        <div class="speaker-company">«ВСЕ | МЕБЕЛЬ»</div>
+        <div class="speaker-desc">Покажет, как сообщество закрывает задачи производителя.</div>
+      </div>
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar">ИФ</div>
+        <div class="speaker-name">Игорь Федосов</div>
+        <div class="speaker-company">ЦРПП</div>
+        <div class="speaker-desc">Расскажет, как получить господдержку и выйти на биржу заказов.</div>
+      </div>
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar">ИФ</div>
+        <div class="speaker-name">Иван Фролов</div>
+        <div class="speaker-company">BlastBit</div>
+        <div class="speaker-desc">Даст карту рабочих каналов с прогнозом на 2027.</div>
+      </div>
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar">ДМ</div>
+        <div class="speaker-name">Дмитрий Мухин</div>
+        <div class="speaker-company">UIS</div>
+        <div class="speaker-desc">Покажет точки потери лидов в звонках.</div>
+      </div>
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar">ВБ</div>
+        <div class="speaker-name">Валерия Блау</div>
+        <div class="speaker-company">«БлауПроф»</div>
+        <div class="speaker-desc">Объяснит, как закрывать вакансии в цех.</div>
+      </div>
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar">АБ</div>
+        <div class="speaker-name">Александр Бартев</div>
+        <div class="speaker-company">«Омега Дизайн»</div>
+        <div class="speaker-desc">Покажет, как алюминий открывает премиум.</div>
+      </div>
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar">ВЛ</div>
+        <div class="speaker-name">Валерия Леви</div>
+        <div class="speaker-company">«ЛЕВИ | БЮРО»</div>
+        <div class="speaker-desc">Разберёт реальный конфликт производителя и клиента.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUE -->
+<section>
+  <div class="container">
+    <h2 class="reveal">Место</h2>
+    <div class="venue-grid">
+      <div class="venue-info reveal">
+        <h3>Площадка, где всё настроено на пользу.</h3>
+        <p>Мы выбрали пространство, где ничего не отвлекает от программы: удобный зал, зоны для нетворкинга, кофе между блоками.</p>
+        <div class="venue-address">
+          <strong>Адрес</strong>
+          Санкт-Петербург, ул. Наличная, 44, корп. 1
+        </div>
+      </div>
+      <div class="venue-map reveal">
+        <iframe src="https://yandex.ru/map-widget/v1/?text=Санкт-Петербург%2C%20Наличная%204

@@ -296,6 +296,9 @@
   }
   .form-btn:hover { background: #F5B800; color: #0A0A0A; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(245,184,0,0.35); }
   .form-note { text-align: center; font-size: 13px; color: #AAA; margin-top: 12px; }
+  .form-note a { color: inherit; text-decoration: underline; }
+  .footer-bottom a { color: #888; text-decoration: underline; text-underline-offset: 3px; }
+  .footer-bottom a:hover { color: #F5B800; }
   .form-success {
     display: none;
     background: #FAFAF8;
@@ -680,7 +683,7 @@
         <input type="tel" name="phone" placeholder="Телефон" required>
         <input type="email" name="email" placeholder="Email" required>
         <button type="submit" class="form-btn">Забрать место</button>
-        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+        <p class="form-note">Нажимая кнопку, вы даёте <a href="/consent/" target="_blank">согласие на обработку персональных данных</a> в соответствии с <a href="/privacy/" target="_blank">политикой</a>.</p>
       </form>
       <div class="form-success" id="formSuccess">
         <h3>Спасибо!</h3>
@@ -773,7 +776,7 @@
         <a href="#">Telegram</a>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 СБОРКА. Все права защищены.</div>
+    <div class="footer-bottom">© 2026 СБОРКА · ИП Фетисов А. А. · <a href="/privacy/">Политика обработки персональных данных</a> · <a href="/consent/">Согласие на обработку персональных данных</a></div>
   </div>
 </footer>
 

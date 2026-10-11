@@ -235,7 +235,10 @@
     color: #0A0A0A;
     margin-bottom: 24px;
     letter-spacing: -0.02em;
+    overflow: hidden;
   }
+  .speaker-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .speaker-card:has(img) .speaker-avatar { width: 96px; height: 96px; background: #EEE; }
   .speaker-name { font-size: 20px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.02em; color: #0A0A0A; }
   .speaker-company { font-size: 14px; color: #888; margin-bottom: 16px; font-weight: 600; }
   .speaker-desc { font-size: 15px; color: #555; line-height: 1.6; }
@@ -323,8 +326,9 @@
   .partners { text-align: center; padding: 96px 0; border-top: 1px solid #EBEBEB; background: #FFF; }
   .partners h3 { color: #888; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 48px; font-weight: 600; }
   .partners-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
     max-width: 900px;
     margin: 0 auto;
@@ -335,7 +339,11 @@
     border-radius: 12px;
     padding: 32px 24px;
     transition: border-color 0.2s, transform 0.2s;
+    flex: 0 1 calc((100% - 48px) / 3);
+    background: #FFF;
   }
+  .partner-logo { height: 72px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .partner-logo img { max-height: 72px; max-width: 100%; object-fit: contain; }
   .partner-item:hover { border-color: #F5B800; transform: translateY(-2px); }
   .partner-name {
     font-size: 20px;
@@ -380,14 +388,14 @@
     .story-grid, .venue-grid { grid-template-columns: 1fr; gap: 40px; }
     .adv-grid { grid-template-columns: 1fr; }
     .speakers-grid { grid-template-columns: 1fr; }
-    .partners-grid { grid-template-columns: repeat(2, 1fr); }
+    .partner-item { flex-basis: calc((100% - 24px) / 2); }
     .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     .program-item { grid-template-columns: 1fr; gap: 8px; }
     .program-time { font-size: 16px; }
     .stats { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 500px) {
-    .partners-grid { grid-template-columns: 1fr; }
+    .partner-item { flex-basis: 100%; }
     .hero-actions { flex-direction: column; }
     .btn { width: 100%; text-align: center; }
     .container { padding: 0 20px; }
@@ -589,19 +597,19 @@
     <h2 class="reveal">Спикеры</h2>
     <div class="speakers-grid">
       <div class="speaker-card reveal">
-        <div class="speaker-avatar">АФ</div>
+        <div class="speaker-avatar"><img src="img/speakers/fetisov.jpg" alt="Артём Фетисов" loading="lazy" width="96" height="96"></div>
         <div class="speaker-name">Артём Фетисов</div>
         <div class="speaker-company">«ВСЕ | МЕБЕЛЬ» / «Цифровые решения»</div>
         <div class="speaker-desc">Покажет, как сообщество закрывает задачи производителя.</div>
       </div>
       <div class="speaker-card reveal">
-        <div class="speaker-avatar">ИФ</div>
+        <div class="speaker-avatar"><img src="img/speakers/fedosov.jpg" alt="Игорь Федосов" loading="lazy" width="96" height="96"></div>
         <div class="speaker-name">Игорь Федосов</div>
         <div class="speaker-company">ЦРПП</div>
         <div class="speaker-desc">Расскажет, как получить господдержку и выйти на биржу заказов.</div>
       </div>
       <div class="speaker-card reveal">
-        <div class="speaker-avatar">ИФ</div>
+        <div class="speaker-avatar"><img src="img/speakers/frolov.jpg" alt="Иван Фролов" loading="lazy" width="96" height="96"></div>
         <div class="speaker-name">Иван Фролов</div>
         <div class="speaker-company">BlastBit</div>
         <div class="speaker-desc">Даст карту рабочих каналов с прогнозом на 2027.</div>
@@ -613,19 +621,19 @@
         <div class="speaker-desc">Покажет точки потери лидов в звонках.</div>
       </div>
       <div class="speaker-card reveal">
-        <div class="speaker-avatar">ВБ</div>
+        <div class="speaker-avatar"><img src="img/speakers/blau.jpg" alt="Валерия Блау" loading="lazy" width="96" height="96"></div>
         <div class="speaker-name">Валерия Блау</div>
         <div class="speaker-company">«БлауПроф»</div>
         <div class="speaker-desc">Объяснит, как закрывать вакансии в цех.</div>
       </div>
       <div class="speaker-card reveal">
-        <div class="speaker-avatar">АБ</div>
+        <div class="speaker-avatar"><img src="img/speakers/bartev.jpg" alt="Александр Бартев" loading="lazy" width="96" height="96"></div>
         <div class="speaker-name">Александр Бартев</div>
         <div class="speaker-company">«Омега Дизайн»</div>
         <div class="speaker-desc">Покажет, как алюминий открывает премиум.</div>
       </div>
       <div class="speaker-card reveal">
-        <div class="speaker-avatar">ВЛ</div>
+        <div class="speaker-avatar"><img src="img/speakers/levi.jpg" alt="Валерия Леви" loading="lazy" width="96" height="96"></div>
         <div class="speaker-name">Валерия Леви</div>
         <div class="speaker-company">«ЛЕВИ | БЮРО»</div>
         <div class="speaker-desc">Разберёт реальный конфликт производителя и клиента.</div>
@@ -721,28 +729,31 @@
     <h3>Партнёры</h3>
     <div class="partners-grid">
       <div class="partner-item reveal">
-        <div class="partner-name">ЦРПП</div>
-        <div class="partner-desc">Центр развития и поддержки предпринимательства СПб</div>
-      </div>
-      <div class="partner-item reveal">
-        <div class="partner-name">Мой бизнес</div>
+        <div class="partner-logo"><img src="img/partners/moy-biznes.png" alt="Мой бизнес" loading="lazy"></div>
         <div class="partner-desc">Центр оказания услуг для предпринимателей</div>
       </div>
       <div class="partner-item reveal">
-        <div class="partner-name">Цифровые решения</div>
+        <div class="partner-logo"><img src="img/partners/crpp.png" alt="ЦРПП" loading="lazy"></div>
+        <div class="partner-desc">Центр развития и поддержки предпринимательства СПб</div>
+      </div>
+      <div class="partner-item reveal">
+        <div class="partner-logo"><img src="img/partners/cifrovye-resheniya.png" alt="Цифровые решения" loading="lazy"></div>
         <div class="partner-desc">Автоматизация продаж и производства</div>
       </div>
       <div class="partner-item reveal">
-        <div class="partner-name">Омега Дизайн</div>
+        <div class="partner-logo"><img src="img/partners/omega.png" alt="Омега Дизайн" loading="lazy"></div>
         <div class="partner-desc">Алюминиевые интерьерные системы</div>
       </div>
       <div class="partner-item reveal">
-        <div class="partner-name">UIS</div>
+        <div class="partner-logo"><img src="img/partners/uis.png" alt="UIS" loading="lazy"></div>
         <div class="partner-desc">IP-телефония и аналитика</div>
       </div>
       <div class="partner-item reveal">
-        <div class="partner-name">Amix</div>
+        <div class="partner-logo"><img src="img/partners/amix.png" alt="Amix" loading="lazy"></div>
         <div class="partner-desc">Мебельная фурнитура и комплектующие</div>
+      </div>
+      <div class="partner-item reveal">
+        <div class="partner-logo"><img src="img/partners/blastbit.png" alt="BlastBit" loading="lazy"></div>
       </div>
     </div>
   </div>

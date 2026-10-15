@@ -299,6 +299,10 @@
   .form-note a { color: inherit; text-decoration: underline; }
   .footer-bottom a { color: #888; text-decoration: underline; text-underline-offset: 3px; }
   .footer-bottom a:hover { color: #F5B800; }
+  .b24-form-wrap { text-align: left; margin-top: 8px; min-height: 420px; }
+  .b24-form-wrap .b24-form-wrapper { box-shadow: none !important; border: none !important; background: transparent !important; }
+  .b24-form-wrap .b24-form-btn { background: #0A0A0A !important; border-radius: 8px !important; font-weight: 700 !important; }
+  .b24-form-wrap .b24-form-btn:hover { background: #F5B800 !important; color: #0A0A0A !important; }
   .form-success {
     display: none;
     background: #FAFAF8;
@@ -677,17 +681,8 @@
     <div class="form-wrapper reveal">
       <h2>СБОРКА — 4 часа, после которых есть что делать.</h2>
       <p class="form-sub">Участие бесплатное. Количество мест ограничено.</p>
-      <form id="regForm" onsubmit="return handleSubmit(event)">
-        <input type="text" name="name" placeholder="Имя" required>
-        <input type="text" name="company" placeholder="Компания" required>
-        <input type="tel" name="phone" placeholder="Телефон" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <button type="submit" class="form-btn">Забрать место</button>
-        <p class="form-note">Нажимая кнопку, вы даёте <a href="/consent/" target="_blank">согласие на обработку персональных данных</a> в соответствии с <a href="/privacy/" target="_blank">политикой</a>.</p>
-      </form>
-      <div class="form-success" id="formSuccess">
-        <h3>Спасибо!</h3>
-        <p>Мы свяжемся с вами и подтвердим участие.</p>
+      <div class="b24-form-wrap">
+        <script data-b24-form="inline/18/ckfjk2" data-b24-form-telemetry-sign="v1:18:site.f10f055a843de2527b1f93d30b84762960446cdcafa27bf0f77813a26fdbf6fb" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.ru/b5754995/crm/form/loader_18.js');</script>
       </div>
     </div>
   </div>
@@ -781,17 +776,6 @@
 </footer>
 
 <script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    const form = document.getElementById('regForm');
-    const success = document.getElementById('formSuccess');
-    const data = new FormData(form);
-    console.log('Заявка:', Object.fromEntries(data));
-    form.style.display = 'none';
-    success.style.display = 'block';
-    return false;
-  }
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

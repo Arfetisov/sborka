@@ -696,6 +696,14 @@
       <h2>СБОРКА — 4 часа, после которых есть что делать.</h2>
       <p class="form-sub">Участие бесплатное. Количество мест ограничено.</p>
       <div class="b24-form-wrap">
+        <script>
+        /* Обход сбоя Битрикс24 (21.10.2026): их сервер отвечает 403 на заявки формы в формате multipart.
+           Переупаковываем текстовые поля формы в обычный формат application/x-www-form-urlencoded. */
+        (function(){var f=window.fetch;if(!f||!window.URLSearchParams||!window.FormData)return;
+        window.fetch=function(u,o){try{if(String(u&&u.url||u).indexOf('crm.site.form')>-1&&o&&o.body instanceof FormData){var p=new URLSearchParams(),ok=true;
+        o.body.forEach(function(v,k){if(typeof v==='string')p.append(k,v);else ok=false;});if(ok){o=Object.assign({},o,{body:p});}}}catch(e){}
+        return f.call(this,u,o);};})();
+        </script>
         <script data-b24-form="inline/18/ckfjk2" data-b24-form-telemetry-sign="v1:18:site.f10f055a843de2527b1f93d30b84762960446cdcafa27bf0f77813a26fdbf6fb" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.ru/b5754995/crm/form/loader_18.js');</script>
       </div>
       <p class="form-fallback">Если форма не отправляется, напишите нам: <a href="mailto:info@vsemebel.pro">info@vsemebel.pro</a> или позвоните: <a href="tel:+79650348852">+7&nbsp;(965)&nbsp;034-88-52</a>. Зарегистрируем вручную.</p>
